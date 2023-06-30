@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="reset.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Quizzando</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <p>Quizzando</p>
+    </header>
+    <main class="window1-1">
+      <div class="newQuizz">
+        <p>Você ainda não criou nenhum quizz.</p>
+        <button onclick="createNewQuizz()">
+          <p>Criar Quizz</p>
+        </button>
+      </div>
+      <div class="title">
+        <p>Todos os quizzes</p>
+      </div>
+    </main>
+    <main class="window1-2 hide">
+      <div class="title2">
+        <p>Seus Quizzes</p>
+      </div>
+      <article>
+        <img src="./img/cachorro.png" alt="cachorros" />
+        <div class="gradient"></div>
+        <p>Qual cachorro você é?</p>
+      </article>
+      <div class="title">
+        <p>Todos os quizzes</p>
+      </div>
+      <article>
+        <img src="./img/frozen.jpg" alt="frozen" />
+        <div class="gradient"></div>
+        <p>Você é realmente fã de Frozen?</p>
+      </article>
+    </main>
+    <main class="questions hide">
+      <!-- <div class="header-quizzes">
+        <img src="./img/frozen.jpg" alt="frozen" />
+        <div class="opacity"></div>
+        <p>Você é realmente fã de Frozen?</p>
+      </div>
+      <section class="question">
+        <div class="question-title">
+          <p>Quem criou o Christopher?</p>
+        </div>
+        <div class="img-options">
+          <figure>
+            <img src="./img/quebragelo.jpg" alt="quebragelo" />
+            <figcaption>Os vendedores de gelo</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./img/King_and_Queen_of_Arendelle.webp"
+              alt="rei e rainha"
+            />
+            <figcaption>O Rei e a Rainha</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/oaken.jpg" alt="oaken" />
+            <figcaption>O Oaken</figcaption>
+          </figure>
+
+          <figure>
+            <img src="./img/The_Trolls.webp" alt="trolls" />
+            <figcaption>Os trolls</figcaption>
+          </figure>
+        </div>
+      </section> -->
+    </main>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script-window1.js"></script>
+    <script src="script-window2.js"></script>
+  </body>
+</html>

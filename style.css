@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/*------------------------------------ Geral: telas 1.1 e 1.2*/
+
+/* header */
+header {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  background-color: #367794;
+  font-size: 25px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* main */
+main {
+  width: fit-content;
+  margin: 20px auto;
+}
+/* Quizzes */
+article {
+  height: 180px;
+  width: 340px;
+  position: relative;
+  margin: 10px 0;
+  overflow: hidden;
+}
+article img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+article p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  height: fit-content;
+  font-size: 19px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 22px;
+  text-shadow: 2px -2px 3px #080808;
+  z-index: 2;
+}
+/*--------------------------------------------------- tela 1.1 */
+/* criação de Quizz */
+.newQuizz {
+  height: 180px;
+  width: 340px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid #000000 1px;
+  color: #b9b9b9;
+}
+button {
+  border: dashed #bc6a88 2px;
+  border-radius: 30px;
+  width: 150px;
+  height: 40px;
+  margin-top: 30px;
+}
+/* titulo dos articles */
+.title {
+  width: 340px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.title p {
+  font-size: 20px;
+  font-weight: 700;
+}
+/*---------------------------------------------------- tela 1.2 */
+.title2 {
+  width: 340px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.title2 p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ------------------------------------------------------tela 2 */
+.questions {
+  margin: 0;
+  width: 100%;
+}
+
+.header-quizzes {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.header-quizzes img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.header-quizzes p {
+  position: absolute;
+  bottom: 45%;
+  left: 15%;
+  height: fit-content;
+  font-size: 19px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 22px;
+  text-shadow: 2px -2px 3px #080808;
+  z-index: 2;
+}
+
+/* seção de perguntas */
+
+section {
+  width: 340px;
+  height: fit-content;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section img {
+  width: 165px;
+  height: 115px;
+  margin-top: 10px;
+}
+
+.question-title p {
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.question-title {
+  width: 340px;
+  height: 80px;
+  background-color: #bc6a88;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+figcaption {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+/* utilitarios */
+.hide {
+  display: none;
+}
+.gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(to top, #000000, #f3ebeb05);
+  top: 0;
+  z-index: 1;
+}
+.opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #0000007c;
+  top: 0;
+  z-index: 1;
+}
