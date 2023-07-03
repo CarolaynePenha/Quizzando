@@ -27,8 +27,6 @@ function renderQuizzes(quizz) {
 
 function openQuizz(idQuizz) {
   secondWindow.classList.remove("hide");
-  console.log(firstWindow.classList.contains("hide"));
-  console.log(secondViewofFirstWindow.classList.contains("hide"));
   if (!firstWindow.classList.contains("hide")) {
     firstWindow.classList.add("hide");
   } else if (!secondViewofFirstWindow.classList.contains("hide")) {
