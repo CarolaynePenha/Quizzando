@@ -47,9 +47,53 @@
       </article>
     </main>
     <main class="questions hide"></main>
+    <main class="window3-1 hide">
+      <h1>Para começar</h1>
+      <input
+        type="text"
+        id="title"
+        placeholder="Titulo do Quizz"
+        minlength="20"
+        maxlength="60"
+        required
+      />
+      <input
+        required
+        type="url"
+        id="image"
+        placeholder="URL da imagem do seu Quizz"
+      />
+      <input
+        type="number"
+        required
+        id="quantityOfQuestions"
+        placeholder="Quantidade de perguntas do Quizz"
+        min="3"
+        max="50"
+      />
+      <input
+        type="number"
+        required
+        id="quantityOfLevels"
+        placeholder="Quantidade de níveis do Quizz"
+        min="2"
+        max="10"
+      />
+      <button onclick="validation1()" class="create-questions">
+        <p>Prosseguir para criação das perguntas</p>
+      </button>
+    </main>
+    <main class="window3-2 hide">
+      <h1>Crie suas perguntas</h1>
+    </main>
+    <main class="window3-3 hide">
+      <h1>Crie suas perguntas</h1>
+    </main>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script-window1.js"></script>
     <script src="script-window2.js"></script>
+    <script src="script-window3.js"></script>
   </body>
 </html>

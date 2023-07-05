@@ -240,6 +240,92 @@ button p {
   text-shadow: 0px 0px 10px #4e0a27;
   padding-bottom: 40px;
 }
+/*  tela 3.1 e 3.2------------------------------------------------------------------------- */
+h1 {
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
+  color: #042d41;
+  padding: 20px;
+}
+input {
+  height: 50px;
+  width: 340px;
+  border-radius: 20px;
+  border: solid #bc6a88 2px;
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+::placeholder {
+  color: #c99bab;
+}
+/* ----------------------------------------------------------------------------------tela 3.1 */
+
+.window3-1 {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-questions {
+  border: solid #367794 2px;
+  background-color: #367794;
+  filter: drop-shadow(3px 5px 5px #0325357c);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 30px;
+  width: 320px;
+  height: 60px;
+  margin-top: 30px;
+  color: #021a25;
+}
+/* -------------------------------------------------------------------------------------tela 3.2 */
+.window3-2 {
+  margin-top: 80px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.window3-2 p {
+  margin-left: 5%;
+  font-weight: 700;
+  color: #042d41;
+  padding-top: 20px;
+}
+.container-questions {
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+  align-items: center;
+}
+.container-questions ion-icon {
+  color: #021a25;
+  font-weight: 700;
+  font-size: 25px;
+  padding-top: 20px;
+}
+.window3-2 button p {
+  padding: 0;
+  margin: 0;
+}
+.window3-2 button {
+  border: solid #367794 2px;
+  background-color: #367794;
+  filter: drop-shadow(3px 5px 5px #0325357c);
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 30px;
+  width: 320px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #021a25;
+  text-align: center;
+}
 /* utilitarios */
 .hide {
   display: none;
