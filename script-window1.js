@@ -15,14 +15,46 @@ function showAllQuizzes(response) {
 }
 
 function renderQuizzes(quizz) {
-  firstWindow = document.querySelector(".window1-1");
-  firstWindow.innerHTML += `
-    <article onclick="openQuizz('${quizz.id}')">
-        <img src=${quizz.image}/>
-        <div class="gradient"></div>
-        <p>${quizz.title}</p>
-    </article>
-    `;
+  console.log("entrei");
+  const listSerialized = localStorage.getItem("lista");
+  const list = JSON.parse(listSerialized);
+  console.log("list: ", list);
+  const yourQuizzes = document.querySelector(".your-quizzes");
+  const allQuizzes = document.querySelector(".all-quizzes");
+  if (listSerialized) {
+    secondViewofFirstWindow.classList.remove("hide");
+    for (let i = 0; i < list.length; i++) {
+      console.log("ûsa o for");
+      if (quizz.id === list[i]) {
+        yourQuizzes.innerHTML += `
+      <article onclick="openQuizz('${quizz.id}')">
+          <img src=${quizz.image}/>
+          <div class="gradient"></div>
+          <p>${quizz.title}</p>
+      </article>
+      `;
+      } else {
+        allQuizzes.innerHTML += `
+      <article onclick="openQuizz('${quizz.id}')">
+          <img src=${quizz.image}/>
+          <div class="gradient"></div>
+          <p>${quizz.title}</p>
+      </article>
+      `;
+      }
+    }
+  } else {
+    console.log("n tem");
+    firstWindow = document.querySelector(".window1-1");
+    firstWindow.classList.remove("hide");
+    firstWindow.innerHTML += `
+      <article onclick="openQuizz('${quizz.id}')">
+          <img src=${quizz.image}/>
+          <div class="gradient"></div>
+          <p>${quizz.title}</p>
+      </article>
+      `;
+  }
 }
 
 function openQuizz(idQuizz) {

@@ -17,7 +17,7 @@
     <header>
       <p>Quizzando</p>
     </header>
-    <main class="window1-1">
+    <main class="window1-1 hide">
       <div class="newQuizz">
         <p>Você ainda não criou nenhum quizz.</p>
         <button onclick="createNewQuizz()">
@@ -32,19 +32,11 @@
       <div class="title2">
         <p>Seus Quizzes</p>
       </div>
-      <article>
-        <img src="./img/cachorro.png" alt="cachorros" />
-        <div class="gradient"></div>
-        <p>Qual cachorro você é?</p>
-      </article>
+      <div class="your-quizzes"></div>
       <div class="title">
         <p>Todos os quizzes</p>
       </div>
-      <article>
-        <img src="./img/frozen.jpg" alt="frozen" />
-        <div class="gradient"></div>
-        <p>Você é realmente fã de Frozen?</p>
-      </article>
+      <div class="all-quizzes"></div>
     </main>
     <main class="questions hide"></main>
     <main class="window3-1 hide">
@@ -69,7 +61,7 @@
         id="quantityOfQuestions"
         placeholder="Quantidade de perguntas do Quizz"
         min="3"
-        max="50"
+        max="10"
       />
       <input
         type="number"
@@ -85,9 +77,14 @@
     </main>
     <main class="window3-2 hide">
       <h1>Crie suas perguntas</h1>
+      <form id="form-questions"></form>
     </main>
     <main class="window3-3 hide">
-      <h1>Crie suas perguntas</h1>
+      <h1>Decida os níveis</h1>
+      <form id="form-levels"></form>
+    </main>
+    <main class="window3-4 hide">
+      <h1>final</h1>
     </main>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
