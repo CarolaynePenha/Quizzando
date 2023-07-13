@@ -7,6 +7,8 @@ let answersObj = {};
 let titleQuizz = null;
 let img = null;
 let numberOfQuestions = 0;
+let idCreatedQuizz = 0;
+let window3Final = null;
 let globalArrayWithUserIDS = [];
 // declaração de funcções
 function createNewQuizz() {
@@ -250,7 +252,45 @@ function openLevels(position) {
 function renderLevels() {
   const form = document.getElementById("form-levels");
   for (let i = 0; i < levelsNumber; i++) {
-    form.innerHTML += `
+    if (i === 0) {
+      form.innerHTML += `
+    <div class="container-questions">
+    <p> Nível ${i + 1}</p>
+    <ion-icon onclick="openLevels(${
+      i + 1
+    })" name="create-outline"></ion-icon></div>
+    <div class="Level${i + 1} hide">
+    <input
+        type="text"
+        required
+        id="LevelTitle${i + 1}"
+        placeholder="Título do nível."
+        minlength="10"
+    />
+    <input
+        type="number"
+        required
+        placeholder="% de acerto mínima igual a 0"
+        id="Percentage${i + 1}"
+        min=0
+        max=0
+    />
+    <input
+    type="url"
+    required
+    id="LevelImg${i + 1}"
+    placeholder="URL da imagem desse nível."
+    />
+    <textarea
+    type"text"
+    required
+    minlength="30"
+     id="levelDescription${i + 1}"
+    placeholder="Descrição desse nível" cols="30" rows="10"></textarea>
+</div>
+    `;
+    } else {
+      form.innerHTML += `
       <div class="container-questions">
       <p> Nível ${i + 1}</p>
       <ion-icon onclick="openLevels(${
@@ -286,6 +326,7 @@ function renderLevels() {
       placeholder="Descrição desse nível" cols="30" rows="10"></textarea>
   </div>
       `;
+    }
   }
 
   const window3Levels = document.querySelector(".window3-3");
@@ -325,8 +366,6 @@ function getLevelsInfos() {
     };
     quizzObject.levels.push(LevelsObj);
   }
-  console.log("quizzObject: ", quizzObject);
-
   const promise = axios.post(
     "https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes",
     quizzObject
@@ -334,6 +373,7 @@ function getLevelsInfos() {
   promise.then((objeto) => {
     globalArrayWithUserIDS.push(objeto.data.id);
     console.log("globalArrayWithUserIDS: ", globalArrayWithUserIDS);
+    idCreatedQuizz = objeto.data.id;
     let globalArrayWithUserIDsSerialized = JSON.stringify(
       globalArrayWithUserIDS
     );
@@ -347,6 +387,18 @@ function ShowLastWindow() {
   window3Levels.classList.add("hide");
   window3Final = document.querySelector(".window3-4");
   window3Final.classList.remove("hide");
+  window3Final.innerHTML += `
+  <article onclick="openQuizz('${idCreatedQuizz}')">
+    <img src=${quizzObject.image}/>
+    <div class="gradient"></div>
+    <p>${quizzObject.title}</p>
+  </article>
+  <button class="button-windows3" onclick="openQuizz('${idCreatedQuizz}')">
+    <p> Acessar quizz</p>
+  </button>
+  <button onclick="returnHome()" class="return-home">
+      <p>Voltar para a home</p>
+  </button>`;
 }
 
 // utilização das funções

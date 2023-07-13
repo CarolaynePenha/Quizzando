@@ -89,16 +89,23 @@ article p {
   width: 340px;
   margin-top: 100px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .title2 p {
   font-size: 20px;
   font-weight: 700;
+}
+.title2 ion-icon {
+  color: #367794;
+  font-size: 30px;
 }
 
 /* ------------------------------------------------------tela 2 */
 .questions {
   margin: 0;
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
@@ -265,13 +272,11 @@ button p {
 /* -------------------------------------------------------------------------------------tela 3.2 */
 .window3-2 {
   margin-top: 80px;
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
 }
 form div {
   margin-top: 0;
+  display: flex;
+  flex-direction: column;
 }
 .window3-2 p {
   margin-left: 5%;
@@ -281,9 +286,13 @@ form div {
 }
 .container-questions {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 340px;
-  align-items: center;
+  height: 80px;
+}
+.container-questions p {
+  width: fit-content;
 }
 .container-questions ion-icon {
   color: #021a25;
@@ -294,10 +303,9 @@ form div {
 /* -------------------------------------------------------------------------------window 3.3 */
 .window3-3 {
   margin-top: 80px;
-  width: 100%;
-  height: fit-content;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .window3-3 p {
   margin-left: 5%;
@@ -313,6 +321,17 @@ textarea {
   margin: 10px;
   text-align: center;
   font-size: 16px;
+}
+/* ------------------------------------------------------window 3.4 */
+.window3-4 {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.window3-4 button {
+  margin: 0;
+  margin-bottom: 20px;
 }
 /*  tela 3.1 e 3.2 e 3.3------------------------------------------------------------------------- */
 h1 {
@@ -385,4 +404,127 @@ input {
 }
 .red {
   color: red;
+}
+.window-load {
+  display: flex;
+  align-items: center;
+}
+.window-load img {
+  width: 300px;
+  margin-top: 70%;
+  height: auto;
+}
+/* ----------------------------------- desktop */
+@media (min-width: 1100px) {
+  header {
+    font-size: 30px;
+  }
+  .title2 {
+    justify-content: flex-start;
+  }
+  .title2 ion-icon {
+    margin-left: 10px;
+  }
+  .window1-2 {
+    margin: 20px auto;
+    margin-left: 15%;
+  }
+  .your-quizzes {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .all-quizzes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .all-quizzes article {
+    margin-right: 20px;
+  }
+  .your-quizzes article {
+    margin-right: 20px;
+  }
+
+  section {
+    width: 600px;
+  }
+  section img {
+    width: 280px;
+    height: 200px;
+  }
+  .question-title {
+    width: 600px;
+  }
+  .question-title p {
+    font-size: 22px;
+  }
+  .header-quizzes p {
+    font-size: 22px;
+  }
+  .header-quizzes {
+    height: 200px;
+    width: 100%;
+  }
+  .options-title {
+    font-size: 18px;
+  }
+  .img-options {
+    width: 600px;
+  }
+
+  input {
+    height: 50px;
+    width: 600px;
+    font-size: 22px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .create-questions {
+    font-size: 20px;
+    width: 500px;
+    height: 60px;
+  }
+  .container-questions {
+    width: 600px;
+  }
+  .window3-2 {
+    align-items: center;
+  }
+  form p {
+    font-size: 20px;
+  }
+  .button-windows3 {
+    width: 500px;
+    margin-left: 50px;
+    font-size: 19px;
+  }
+  textarea {
+    width: 600px;
+    font-size: 22px;
+  }
+  .title-result {
+    width: 600px;
+  }
+  .title-result p {
+    font-size: 22px;
+  }
+  .result-message {
+    width: 600px;
+  }
+  .result-message p {
+    width: 600px;
+    font-size: 19px;
+  }
+
+  .restart-quizz {
+    width: 250px;
+    height: 50px;
+  }
+  .return-home {
+    width: 250px;
+    height: 50px;
+    margin: 20px auto;
+  }
 }

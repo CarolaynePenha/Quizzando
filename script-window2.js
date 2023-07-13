@@ -9,12 +9,16 @@ function comparator() {
   return Math.random() - 0.5;
 }
 function getQuizz(idQuizz) {
+  load.classList.remove("hide");
+  loadImg.classList.remove("hide");
   const urlOneQuizz = `${urlQuizzes}/${idQuizz}`;
   const promise = axios.get(urlOneQuizz);
   promise.then(showQuestions);
   promise.catch(handleError);
 }
 function showQuestions(response) {
+  load.classList.add("hide");
+  loadImg.classList.add("hide");
   quizz = response.data;
   const questions = document.querySelector(".questions");
   questions.innerHTML = `

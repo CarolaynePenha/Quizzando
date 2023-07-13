@@ -3,6 +3,9 @@ const urlQuizzes = "https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes";
 let firstWindow = document.querySelector(".window1-1");
 let secondViewofFirstWindow = document.querySelector(".window1-2");
 let secondWindow = document.querySelector(".questions");
+let list = [];
+const loadImg = document.querySelector(".window-load > img");
+const load = document.querySelector(".window-load");
 
 // declaração de funções
 function getQuizzes() {
@@ -11,20 +14,20 @@ function getQuizzes() {
   promise.catch(handleError);
 }
 function showAllQuizzes(response) {
+  load.classList.add("hide");
+  loadImg.classList.add("hide");
   response.data.forEach(renderQuizzes);
 }
 
 function renderQuizzes(quizz) {
-  console.log("entrei");
   const listSerialized = localStorage.getItem("lista");
-  const list = JSON.parse(listSerialized);
+  list = JSON.parse(listSerialized);
   console.log("list: ", list);
   const yourQuizzes = document.querySelector(".your-quizzes");
   const allQuizzes = document.querySelector(".all-quizzes");
   if (listSerialized) {
     secondViewofFirstWindow.classList.remove("hide");
     for (let i = 0; i < list.length; i++) {
-      console.log("ûsa o for");
       if (quizz.id === list[i]) {
         yourQuizzes.innerHTML += `
       <article onclick="openQuizz('${quizz.id}')">
@@ -44,7 +47,6 @@ function renderQuizzes(quizz) {
       }
     }
   } else {
-    console.log("n tem");
     firstWindow = document.querySelector(".window1-1");
     firstWindow.classList.remove("hide");
     firstWindow.innerHTML += `
@@ -63,12 +65,14 @@ function openQuizz(idQuizz) {
     firstWindow.classList.add("hide");
   } else if (!secondViewofFirstWindow.classList.contains("hide")) {
     secondViewofFirstWindow.classList.add("hide");
+  } else if (!window3Final.classList.contains("hide")) {
+    window3Final.classList.add("hide");
   }
   getQuizz(idQuizz);
 }
 
 function handleError(error) {
-  console.log("Status code: " + error.response.status);
+  console.log("Status code: " + error.re3.ponse.status);
 }
 
 // // utilização das funções
