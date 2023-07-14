@@ -371,6 +371,8 @@ function getLevelsInfos() {
     quizzObject
   );
   promise.then((objeto) => {
+    const listSerialized = localStorage.getItem("lista");
+    globalArrayWithUserIDS = JSON.parse(listSerialized);
     globalArrayWithUserIDS.push(objeto.data.id);
     console.log("globalArrayWithUserIDS: ", globalArrayWithUserIDS);
     idCreatedQuizz = objeto.data.id;
